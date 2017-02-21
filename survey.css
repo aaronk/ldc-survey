@@ -1,0 +1,68 @@
+body {
+    font-family: Arial;
+    font-size: 12px;
+}
+
+#learn {
+    background-color: blue;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+#mentor {
+    background-color: green;
+    min-height: 10%;
+    min-width: 10%;
+}
+
+#forgetit {
+    background-color: red;
+    min-height: 10%;
+    min-width: 10%;
+}
+
+#inapinch {
+    background-color: yellow;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+#talents {
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+#matrix {
+    width: 50%;
+    position: relative;
+    float: left;
+    min-height: 400px;
+}
+
+.grid-row {
+    width: 100%;
+}
+
+.grid-box {
+    position: relative;
+    float: left;
+    width: 40%;
+    height: 200px;
+}
+
+.talent {
+    position: relative;
+    z-index: 100;
+}
+
+#y-axis-label {
+    transform: rotate(270deg) translateX(-50%);
+    transform-origin: left bottom;
+}
+
+.tick-label {
+    position: relative;
+    float: left;
+    height: 200px;
+}
