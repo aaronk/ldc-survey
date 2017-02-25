@@ -47,7 +47,7 @@ body {
 .grid-box {
     position: relative;
     float: left;
-    width: 40%;
+    width: 45%;
     height: 200px;
 }
 
@@ -59,10 +59,37 @@ body {
 #y-axis-label {
     transform: rotate(270deg) translateX(-50%);
     transform-origin: left bottom;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#x-axis-label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 50%;
+    margin: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: inline-block;
 }
 
 .tick-label {
     position: relative;
     float: left;
     height: 200px;
+    width: 30px;
 }
+.bottom-tick-label {
+    position: relative;
+    float: left;
+    width: 30px;
+}
+
+#vertical-arrow-box {
+    transform: translateX(-50%);
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
