@@ -38,6 +38,7 @@ body {
     position: relative;
     float: left;
     min-height: 400px;
+    padding-top: 30px;
 }
 
 .grid-row {

@@ -16,5 +16,9 @@
         $(".grid-box").droppable({
             drop: handleDrop
         });
+
+        $(".tooltip").tooltip({
+            position: { my: "bottom", at: "top+30"}
+        });
     });
 })(jQuery)
