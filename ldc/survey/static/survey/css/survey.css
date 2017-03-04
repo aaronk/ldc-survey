@@ -31,25 +31,25 @@ p {
     margin-right: 30%;
 }
 #learn {
-    background-color: blue;
+    background-color: #ccc;
     min-width: 10%;
     min-height: 10%;
 }
 
 #mentor {
-    background-color: green;
+    background-color: #aaa;
     min-height: 10%;
     min-width: 10%;
 }
 
 #forgetit {
-    background-color: red;
+    background-color: #ddd;
     min-height: 10%;
     min-width: 10%;
 }
 
 #inapinch {
-    background-color: yellow;
+    background-color: #ccc;
     min-width: 10%;
     min-height: 10%;
 }
@@ -75,7 +75,7 @@ p {
 .grid-box {
     position: relative;
     float: left;
-    width: 45%;
+    width: 40%;
     height: 200px;
     padding: 10px;
 }
@@ -91,10 +91,11 @@ p {
 }
 
 #y-axis-label {
-    transform: rotate(270deg) translateX(-50%);
+    transform: rotate(270deg) translateX(-40%);
     transform-origin: left bottom;
     font-size: 16px;
     font-weight: bold;
+    font-family: Arial;
 }
 
 #x-axis-label {
@@ -102,21 +103,24 @@ p {
     font-weight: bold;
     width: 50%;
     margin: 1em;
-    padding-left: 5%;
+    padding-left: 10%;
     padding-right: 5%;
     display: inline-block;
+    font-family: Arial;
 }
 
 .tick-label {
     position: relative;
     float: left;
     height: 200px;
-    width: 30px;
+    width: 40px;
+    font-size: 14px;
 }
 .bottom-tick-label {
     position: relative;
     float: left;
     width: 30px;
+    font-size: 14px;
 }
 
 #vertical-arrow-box {
