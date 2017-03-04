@@ -8,9 +8,9 @@
         }
 
         $(".talent").draggable({
-            cursor: 'move',
-            snap: '.grid-box',
-            snapMode: 'inner',
+            cursor: "move",
+            snap: ".grid-box",
+            snapMode: "inner",
             revert: "invalid"
         });
         $(".grid-box").droppable({
