@@ -11,7 +11,8 @@
             cursor: "move",
             snap: ".grid-box",
             snapMode: "inner",
-            revert: "invalid"
+            revert: "invalid",
+            helper: "clone"
         });
         $(".grid-box").droppable({
             drop: handleDrop
