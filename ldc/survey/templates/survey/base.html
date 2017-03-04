@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"></link>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{% static 'survey/js/survey.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'survey/css/survey.css' %}"></link>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="title">
+            First Parish Talent Survey
+        </div>
+        <div id="subtitle">
+            Brought to you by Arlington First Parish <a href="http://firstparish.info/index.php/congregationalworkings/groups-and-activities/leadership-development-committee">Leadership Development</a>
+        </div>
+    {% block content %}{% endblock %}
+    </body>
+</html>

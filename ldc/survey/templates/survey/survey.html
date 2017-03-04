@@ -1,0 +1,110 @@
+{% extends "survey/base.html" %}
+{% block head %}
+{% endblock head %}
+{% block content %}
+        <div class="row instructions">
+            <h3>Survey instructions</h3>
+            <p>Grab one of the talents on the left and drag it to the survey box that most matches your expertise and interest.
+            </p>
+            <p>For example, if you are very good with people and you'd like to get involved with socially oriented activities at First Parish, drag <span class="talent-style">1. Interact with people</span> over to the top right box (highest for both experience and interest).
+            </p>
+            <p>
+            If you're not a good performer and you don't want to get anywhere near a stage, drag <span class="talent-style">5. Perform - sing, play music</span> over to the bottom left corner.
+            </p>
+            <p>
+            Reload the page to start over.  Or just <a href="survey.pdf">download the PDF</a>
+            </p>
+        </div>
+        <div class="row">
+            <form id="mail-form" method="post" action=""> {% csrf_token %}
+                <div id="talents">
+                    <h2>Talents</h2>
+                    <div>
+                        <table>
+                            <tr id="1-interact" class="talent"><td>1.</td><td>Interact with people</td></tr>
+                            <tr id="2-detail" class="talent"><td>2.</td><td>Detail oriented</td></tr>
+                            <tr id="3-hospitality" class="talent"><td>3.</td><td>Hospitality - cook, greet, serve</td></tr>
+                            <tr id="4-analytical" class="talent"><td>4.</td><td>Analytical, data oriented</td></tr>
+                            <tr id="5-perform" class="talent"><td>5.</td><td>Perform - sing, play music</td></tr>
+                            <tr id="6-communications" class="talent"><td>6.</td><td>Communications - oral, graphical, written</td></tr>
+                            <tr id="7-teach" class="talent"><td>7.</td><td>Teach, present, run meetings</td></tr>
+                            <tr id="8-spiritual" class="talent"><td>8.</td><td>Contemplate spiritual matters / share on a personal level</td></tr>
+                            <tr id="9-handsdirty" class="talent"><td>9.</td><td>Get hands dirty, garden, fix things</td></tr>
+                            <tr id="X-plan" class="talent"><td>X.</td><td>Plan events</td></tr>
+                            <tr id="Y-children" class="talent"><td>Y.</td><td>Work with children, youth</td></tr>
+                            <tr id="Z-strategic" class="talent"><td>Z.</td><td>Big picture, strategic thinking</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="matrix">
+                    <div>
+                        <div>
+                            <div id="y-axis-label">I would like to do at FP</div>
+                            <div class="grid-row">
+                                <div class="tick-label">More</div>
+                                <div class="grid-box tooltip" id="learn" title="I'd like to learn.">
+                                    <input type="hidden" name="learn"/>
+                                    <table></table>
+                                </div>
+                                <div class="grid-box tooltip" id="mentor" title="I'd very much like to do this (and maybe mentor others.">
+                                    <input type="hidden" name="mentor"/>
+                                    <table></table>
+                                </div>
+                                <div style="clear: both"></div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="tick-label">&nbsp;</div>
+                                <div class="grid-box tooltip" id="forgetit" title="Fuggetaboutit">
+                                    <input type="hidden" name="forgetit"/>
+                                    <table></table>
+                                </div>
+                                <div class="grid-box tooltip" id="inapinch" title="I could advise others, maybe do it in a pinch.">
+                                    <input type="hidden" name="inapinch"/>
+                                    <table></table>
+                                </div>
+                                <div style="clear: both"></div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="bottom-tick-label">Less</div>
+                                <div id="x-axis-label">I am good at / have experience with</div>
+                                <div class="bottom-tick-label" style="float: right; margin-right: 1em;">More</div>
+                                <div style="clear: both"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <table id="form-table">
+                        <tr class="label-row">
+                            <td>Your name</td>
+                            <td>Email</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="name" type="text" size="40"></input>
+                            </td>
+                            <td>
+                                <input name="email" type="text" size="40"></input>
+                            </td>
+                        </tr>
+                        <tr class="label-row">
+                            <td>Would you like to be more involved?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <textarea name="involved" rows="4" cols="90"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="label-row">
+                            <td colspan="2">
+                                <input id="submit-button" type="submit" value="Submit survey"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+{% endblock content %}
