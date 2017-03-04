@@ -40,4 +40,4 @@ def survey(request):
             logger.error('Error processing survey: %s\n%s' % (str(e),traceback.format_exc()))
             return render(request,'survey/survey.html',{'error_message' : 'Did not work.'})
     else:
-        return render(request,'survey/survey.html',{'email_user' : EMAIL_HOST_USER})
+        return render(request,'survey/survey.html')
