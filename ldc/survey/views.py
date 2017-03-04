@@ -34,7 +34,7 @@ def survey(request):
                 lines.append('')
 
             # logger.info('\n'.join(lines))
-            send_mail('LDC Survey Entry','\n'.join(lines),'aaron.kitzmiller@gmail.com',['leadership@firstparish.info','aaron.kitzmiller@gmail.com'])
+            send_mail('LDC Survey Entry','\n'.join(lines),'aaron.kitzmiller@gmail.com',['aaron.kitzmiller@gmail.com'])
             return render(request,'survey/thanks.html')
         except Exception as e:
             logger.error('Error processing survey: %s\n%s' % (str(e),traceback.format_exc()))
